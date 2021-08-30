@@ -18,7 +18,6 @@ namespace CloudwatchLogger
         {
             //output.Write("Timestamps - {0} | Level - {1} | Message {2} {3} {4}", logEvent.Timestamp, logEvent.Level, logEvent.MessageTemplate, JsonConvert.SerializeObject(logEvent.Properties), output.NewLine);
 
-            output.Write("{");
             output.FirstProperty("severity", logEvent.Level.Map());
             output.AddProperty("timestamp", logEvent.Timestamp.ToUnixTimeMilliseconds());
             output.AddProperty("message", logEvent.MessageTemplate);
