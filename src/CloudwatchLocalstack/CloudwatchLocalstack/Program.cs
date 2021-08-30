@@ -18,7 +18,7 @@ namespace CloudwatchLocalstack
         private static void CreateLogSample()
         {
             CloudwatchBasic cloudwatchbasic = provider.GetService<CloudwatchBasic>();
-            cloudwatchbasic.CreateLogSample();
+            cloudwatchbasic.CreateLogSample("log_by_logger");
         }
 
         private static void Initialize()
